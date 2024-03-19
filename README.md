@@ -1,18 +1,22 @@
 # Gas finder
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+O objetivo do nosso projeto é facilitar o processo de localização dos postos de gasolina, assim como sua precificação e seu custo-benefício (tendo em vista o valor do combustível e sua qualidade). 
+Desenvolveremos o projeto por meio de uma aplicação web, com foco mobile. 
+O nome idealiza a função do nosso projeto (encontrar o melhor local para abastecer). 
 
 ## Alunos integrantes da equipe
 
-* Luiz Felipe Gontijo Soares
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Heleno Júnior
+* João Salomão
+* Kauã Agner   
+* Luiz Gontijo
+* Pedro Nunes
+* Sávio Rosynni 
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* João Paulo Carneiro Aramuni
+* Michele Hanne Soares de Andrade
 
 ## Instruções de utilização
 
