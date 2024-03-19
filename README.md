@@ -1,5 +1,5 @@
 # Gas finder
-<img align="center" alt="Header" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2010200-gas-finder/tree/master/img-logo/logo%20gasfinder.jpg" width=150px height=140px />
+<img align="center" alt="Header" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2010200-gas-finder/blob/master/img-logo/logo%20gasfinder.jpg" width=150px height=140px />
 O objetivo do nosso projeto é facilitar o processo de localização dos postos de gasolina, assim como sua precificação e seu custo-benefício (tendo em vista o valor do combustível e sua qualidade). 
 Desenvolveremos o projeto por meio de uma aplicação web, com foco mobile. 
 O nome idealiza a função do nosso projeto (encontrar o melhor local para abastecer). 
