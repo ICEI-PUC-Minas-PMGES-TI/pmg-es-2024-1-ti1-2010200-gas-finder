@@ -24,7 +24,7 @@ O problema fundamental do trabalho é a dificuldade em encontrar postos de gasol
 
 ## Objetivos
 
-O objetivo do nosso trabalho é desenvolver uma Aplicação Web, a partir de ferramentas como o HTML e o CSS, de modo responsível, com o foco em localizar e avaliar postos de combustível a partir da geolocalização do usuário, ou seja, os principais objetivos seriam os de facilitar e ajudar com a economia do usuário. 
+O objetivo do nosso trabalho é desenvolver uma Aplicação Web, a partir de ferramentas como o HTML e o CSS, de modo responsível, com o foco em facilitar o processo de localização dos postos de gasolina, assim como sua precificação e seu custo-benefício (tendo em vista o valor do combustível e sua qualidade, a partir de análises). O nome (GasFinder) idealiza a função do nosso projeto (encontrar o melhor local para abastecer).
 
 ## Justificativa
 
