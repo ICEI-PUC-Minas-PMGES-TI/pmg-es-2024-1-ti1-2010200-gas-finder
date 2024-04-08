@@ -20,7 +20,7 @@ Esta seção traz explicações breves sobre o conjunto de artefatos que precisa
 
 ## Problema
 
-O problema fundamental do trabalho é a dificuldade em encontrar postos de gasolina confiáveis durante um trajeto, ou proóximos a residência do usuário. Por exemplo, quando você está dirigindo e não consegue olhar o preço do ccombustível em um posto na beira da via de locomoção ou também quando você quer saber se o local mais próximo da sua casa também é aquele com o melhor custo benefício.
+O problema fundamental do trabalho é a dificuldade em encontrar postos de gasolina confiáveis durante um trajeto, ou próximos à residência do usuário. Por exemplo, quando você está dirigindo e não consegue olhar o preço do ccombustível em um posto na beira da via de locomoção ou também quando você quer saber se o local mais próximo da sua casa também é aquele com o melhor custo benefício.
 
 ## Objetivos
 
