@@ -58,7 +58,13 @@ Relacione as personas identificadas no seu projeto e os respectivos mapas de emp
 
 ## Histórias de Usuários
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
+Como um motorista de aplicativo, eu gostaria de encontrar postos de gasolina com um bom preço de combustível de forma mais prática para que eu possa obter mais lucro no fim do mês.
+
+Como um caminhoneiro, eu quero localizar, com facilidade, postos de gasolina mais próximos, que tenham suporte e qualidade para abastecer meu veículo.
+
+Como um corretor de imóveis, eu quero buscar de forma mais estratégica por postos de gasolina com a melhor geolocalização e com uma boa qualidade de combustível, para que eu possa economizar tempo durante o dia.
+
+Como um motorista que usa o veículo diariamente, eu gostaria de saber mais sobre os postos de gasolina da minha cidade e fazer uma boa escolha com base nas informações e avaliações de cada.
 
 **Links Úteis**:
 
