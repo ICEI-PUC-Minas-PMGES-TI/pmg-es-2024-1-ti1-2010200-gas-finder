@@ -80,7 +80,6 @@ Os requisitos de um projeto são classificados em dois grupos:
 
 ## Gestão de Projetos
 
- Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
-
-Coloque detalhes sobre o processo de Design Thinking e a implementação do Framework Scrum seguido pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+O grupo está administrando as datas previstas por meio do site "Google agendas", onde pode criar um calendário comunitário com todos os membros inseridos.
+A divisão de papeis da parte de programação será definida a partir dos avanços e das necessidades que o grupo for percebendo. 
 
