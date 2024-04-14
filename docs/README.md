@@ -55,7 +55,7 @@ Como um motorista que usa o veículo diariamente, eu gostaria de saber mais sobr
 
 Os requisitos de um projeto são classificados em dois grupos:
 - Requisitos funcionais- Card com postos de gasolina ( trazendo as informações), tela de cadastro, tela de avaliação do posto.
-- Requisitos não funcionais- Usabilidade fácil,possível de mudaças de acordo com a geolocalização, responsividade, adequado para uso de API, Estética agrádavel da interface. 
+- Requisitos não funcionais- Usabilidade fácil,possível de mudanças de acordo com a geolocalização, responsividade, adequado para uso de API, Estética agradável da interface. 
 
 
 ## User Flow
