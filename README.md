@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/saviorosynni/saviorosynni/assets/161331798/6875d074-67c4-4b60-a76f-68a7f51f37de" width="300px" />
+<img src="https://github.com/saviorosynni/saviorosynni/assets/161331798/6875d074-67c4-4b60-a76f-68a7f51f37de" width=150px height=140px/>
 </div>
 #Gas finder
 <img align="center" alt="Header" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2010200-gas-finder/blob/master/img-logo/logo%20gasfinder.jpg" width=150px height=140px />
