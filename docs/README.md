@@ -72,10 +72,9 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 
 <div align="center">
 <img src="https://github.com/saviorosynni/saviorosynni/assets/161331798/f9ebe310-2089-4e41-a835-77334454ecea" width="300px" />
-</div>
-<div align="center">
 <img src="https://github.com/saviorosynni/saviorosynni/assets/161331798/192d7577-1d0b-4cc2-977e-27e9314ebeb9" width="300px" />
 </div>
+
 ## Gestão de Projetos
 
  Nesta parte do documento, você deve apresentar  o processo de trabalho baseado nas metodologias ágeis, a divisão de papéis e tarefas, as ferramentas empregadas e como foi realizada a gestão de configuração do projeto via GitHub.
