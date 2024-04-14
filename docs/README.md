@@ -64,6 +64,8 @@ Os requisitos de um projeto são classificados em dois grupos:
 <img src="https://github.com/saviorosynni/saviorosynni/assets/161331798/6a1bcd26-3d87-42a4-8eb7-b8bfd507f05d" width="300px" />
 </div>
 
+A ideia inicial é que a nossa aplicação web só vai precisar de duas páginas, uma de login/cadastro e outra para mostrar os postos mais próximos, de maneira com que o usuário saiba a distância e as avaliações dele, mas também consiga avaliar a qualidade deles.
+
 ## Wireframes
 
 <div align="center">
