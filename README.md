@@ -1,7 +1,7 @@
 <div align="center">
 <img src="https://github.com/saviorosynni/saviorosynni/assets/161331798/6875d074-67c4-4b60-a76f-68a7f51f37de" width="300px" />
 </div>
-# Gas finder
+#Gas finder
 <img align="center" alt="Header" src="https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2010200-gas-finder/blob/master/img-logo/logo%20gasfinder.jpg" width=150px height=140px />
 O objetivo do nosso projeto é facilitar o processo de localização dos postos de gasolina, assim como sua precificação e seu custo-benefício (tendo em vista o valor do combustível e sua qualidade, a partir de análises). 
 Desenvolveremos o projeto por meio de uma aplicação web, com foco mobile. 
