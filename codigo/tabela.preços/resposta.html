@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados do Posto</title>
+    <style>
+        /* Estilo do card */
+        .posto-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+
+        /* Estilo do título */
+        .posto-card h2 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        /* Estilo do texto */
+        .posto-card p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Estilo do link */
+        .posto-card a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        /* Estilo do botão */
+        .posto-card button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        /* Estilo do botão quando hover */
+        .posto-card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="postos-container"></div>
+    <div id="pagination-container">
+        <button id="previous-page">Página Anterior</button>
+        <button id="next-page">Próxima Página</button>
+    </div>
+
+    <script>
+        const itemsPerPage = 10;
+        let currentPage = 0;
+
+        // Função para criar o HTML
+        function criarHTMLPostos(postos, page) {
+            const container = document.getElementById('postos-container');
+            container.innerHTML = ''; // Limpa o conteúdo anterior
+
+            const startIndex = page * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentPostos = postos.slice(startIndex, endIndex);
+
+            currentPostos.forEach(posto => {
+                const postoHTML = `
+                    <div class="posto-card">
+                        <p><strong>Cidade:</strong> ${posto.Cidade}</p>
+                        <p><strong>Nome do posto:</strong> ${posto['Nome do posto']}</p>
+                        <p><strong>CNPJ:</strong> ${posto.CNPJ}</p>
+                        <p><strong>Rua/Avenida:</strong> ${posto['Rua/avenida']}</p>
+                        <p><strong>Número:</strong> ${posto.Número}</p>
+                        <p><strong>Bairro:</strong> ${posto.Bairro}</p>
+                        <p><strong>CEP:</strong> ${posto.CEP}</p>
+                        <p><strong>Tipo de combustível:</strong> ${posto['Tipo de combustível']}</p>
+                        <p><strong>Data da atualização:</strong> ${posto['Data da atualização']}</p>
+                        <p><strong>Preço:</strong> ${posto.Preço}</p>
+                        <p><strong>Unidade de medida:</strong> ${posto['Unidade de medida']}</p>
+                        <p><strong>Bandeira:</strong> ${posto.Bandeira}</p>
+                    </div>
+                `;
+                container.innerHTML += postoHTML;
+            });
+        }
+
+        // Carregar o JSON do arquivo
+        fetch('tabela.json')
+            .then(response => response.json())
+            .then(data => {
+                const totalPages = Math.ceil(data.length / itemsPerPage);
+
+                // Mostrar a primeira página
+                criarHTMLPostos(data, currentPage);
+
+                // Adicionar evento de clique para a próxima página
+                document.getElementById('next-page').addEventListener('click', () => {
+                    currentPage = (currentPage + 1) % totalPages;
+                    criarHTMLPostos(data, currentPage);
+                });
+
+                // Adicionar evento de clique para a página anterior
+                document.getElementById('previous-page').addEventListener('click', () => {
+                    currentPage = (currentPage - 1 + totalPages) % totalPages;
+                    criarHTMLPostos(data, currentPage);
+                });
+            })
+            .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
+    </script>
+</body>
+</html>
+
