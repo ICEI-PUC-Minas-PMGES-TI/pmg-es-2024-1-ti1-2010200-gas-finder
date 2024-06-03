@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Dados JSON</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .filtro {
+            margin-bottom: 20px;
+        }
+        .resultado {
+            margin-top: 20px;
+        }
+        .item {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Filtro de Dados JSON</h1>
+    <div class="filtro">
+        <label for="precoMaximo">Preço máximo:</label>
+        <input type="number" step="1" id="precoMaximo" name="precoMaximo">
+        <br>
+        <label for="bandeira">Bandeira:</label>
+        <select id="bandeira" name="bandeira">
+            <option value=""></option>
+            <option value="ALESAT">ALESAT</option>
+            <option value="VIBRA">VIBRA</option>
+            <option value="BRANCA">BRANCA</option>
+            <option value="RAIZEN">RAIZEN</option>
+        </select>
+        <br>
+        <label for="tipoCombustivel">Tipo de Combustível:</label>
+        <select id="tipoCombustivel" name="tipoCombustivel">
+            <option value=""></option>
+            <option value="ETANOL">ETANOL</option>
+            <option value="GASOLINA">GASOLINA</option>
+            <option value="DIESEL">DIESEL</option>
+            <option value="GASOLINA ADITIVADA">GASOLINA ADITIVADA</option>
+        </select>
+        <br>
+        <button onclick="filtrarDados()">Filtrar</button>
+    </div>
+    <div class="resultado" id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
