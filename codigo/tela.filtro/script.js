@@ -3,7 +3,6 @@ async function carregarDados() {
     const dados = await resposta.json();
     return dados;
 }
-
 async function filtrarDados() {
     const dados = await carregarDados();
 
