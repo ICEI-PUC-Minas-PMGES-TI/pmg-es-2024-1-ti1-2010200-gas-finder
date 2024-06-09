@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="imagens/logo verde.png" type="image/x-icon">
+    <!--Google Fonts-->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Fim Google Fonts-->
+    <!-- bootstrap icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    
+    <title>Gas Finder</title>
+    <script>
+      const itemsPerPage = 10;
+      let currentPage = 0;
+
+      // Função para criar o HTML
+      function criarHTMLPostos(postos, page) {
+          const container = document.getElementById('postos-container');
+          container.innerHTML = ''; // Limpa o conteúdo anterior
+
+          const startIndex = page * itemsPerPage;
+          const endIndex = startIndex + itemsPerPage;
+          const currentPostos = postos.slice(startIndex, endIndex);
+
+          currentPostos.forEach(posto => {
+              const postoHTML = `
+                  <div class="posto-card">
+                      <p><strong>Cidade:</strong> ${posto.Cidade}</p>
+                      <p><strong>Nome do posto:</strong> ${posto['Nome do posto']}</p>
+                      <p><strong>CNPJ:</strong> ${posto.CNPJ}</p>
+                      <p><strong>Rua/Avenida:</strong> ${posto['Rua/avenida']}</p>
+                      <p><strong>Número:</strong> ${posto.Número}</p>
+                      <p><strong>Bairro:</strong> ${posto.Bairro}</p>
+                      <p><strong>CEP:</strong> ${posto.CEP}</p>
+                      <p><strong>Tipo de combustível:</strong> ${posto['Tipo de combustível']}</p>
+                      <p><strong>Data da atualização:</strong> ${posto['Data da atualização']}</p>
+                      <p><strong>Preço:</strong> ${posto.Preço}</p>
+                      <p><strong>Unidade de medida:</strong> ${posto['Unidade de medida']}</p>
+                      <p><strong>Bandeira:</strong> ${posto.Bandeira}</p>
+                  </div>
+              `;
+              container.innerHTML += postoHTML;
+          });
+      }
+
+      // Carregar o JSON do arquivo
+      fetch('cards.postos/tabela.json')
+          .then(response => response.json())
+          .then(data => {
+              const totalPages = Math.ceil(data.length / itemsPerPage);
+
+              // Mostrar a primeira página
+              criarHTMLPostos(data, currentPage);
+
+              // Adicionar evento de clique para a próxima página
+              document.getElementById('next-page').addEventListener('click', () => {
+                  currentPage = (currentPage + 1) % totalPages;
+                  criarHTMLPostos(data, currentPage);
+              });
+
+              // Adicionar evento de clique para a página anterior
+              document.getElementById('previous-page').addEventListener('click', () => {
+                  currentPage = (currentPage - 1 + totalPages) % totalPages;
+                  criarHTMLPostos(data, currentPage);
+              });
+          })
+          .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
+  </script>
+
+  </head>
+  <body>
+    <header>
+      <div class="interface">
+        <div class="logo">
+          <a href="#">
+            <img src="imagens/logo verde.png" alt="logo" />
+          </a>
+        </div>
+        <nav class="menu-desktop">
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Postos</a></li>
+            <li><a href="#">Quem nos somos?</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+        <div class="btn-contato">
+          <a href="#">
+            <button>Meu Perfil</button>
+          </a>
+        </div>
+        <!--Logo-->
+      </div>
+      <!--Interface-->
+    </header>
+    <main>
+      <section class="topo-do-site">
+        <div class="interface">
+          <div class="flex">
+            <div class="txt-topo-site">
+              <h1>
+                Postos de 
+                <span>Gasolina!</span>
+              </h1>
+             </section>
+             <section class="carta"><!--card dos postos-->
+              <article class="card">
+                <div class="card-int">
+                  
+                    <div class="imagens">
+                      <img src="imagens/posto.png" width="300px" alt="">
+                    </div>
+                    <div class="card-data">
+                      <p class="title">This is a test title
+                      </p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <button class="button">More info</button>
+                    </div>
+                </div>
+            </article>
+ 
+             </section>
+             
+            </main>
+              </body>
+</html>
