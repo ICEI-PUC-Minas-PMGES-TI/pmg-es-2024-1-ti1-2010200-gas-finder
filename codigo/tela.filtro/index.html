@@ -2,32 +2,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtro de Dados JSON</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .filtro {
-            margin-bottom: 20px;
-        }
-        .resultado {
-            margin-top: 20px;
-        }
-        .item {
-            margin-bottom: 10px;
-        }
-    </style>
+    <title>Filtro de Dados</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT7QYILx95f2BW1aIotyvflS9Lw7Sb9h8&libraries=geometry"></script>
 </head>
-    
 <body>
-    <h1>Filtro de Dados JSON</h1>
-    <div class="filtro">
-        <label for="precoMaximo">Preço máximo:</label>
-        <input type="number" step="1" id="precoMaximo" name="precoMaximo">
+    <h1>Filtro de Dados</h1>
+    <div class="filter-select">
+        <label for="ordem-select">Ordenar por: </label>
+        <select id="ordem-select" onchange="listarPostos(this.value)">
+            <option value="none" selected></option>
+            <option value="menor-dist">Menor Distância</option>
+            <option value="maior-dist">Maior Distância</option>
+            <option value="menor-preço">Menor Preço</option>
+            <option value="maior-preço">Maior Preço</option>
+        </select>
         <br>
         <label for="bandeira">Bandeira:</label>
-        <select id="bandeira" name="bandeira">
+        <select id="bandeira" onchange="listarPostos(this.value)">
             <option value=""></option>
             <option value="ALESAT">ALESAT</option>
             <option value="VIBRA">VIBRA</option>
@@ -36,18 +27,17 @@
         </select>
         <br>
         <label for="tipoCombustivel">Tipo de Combustível:</label>
-        <select id="tipoCombustivel" name="tipoCombustivel">
+        <select id="tipoCombustivel" onchange="listarPostos(this.value)">
             <option value=""></option>
             <option value="ETANOL">ETANOL</option>
             <option value="GASOLINA">GASOLINA</option>
             <option value="DIESEL">DIESEL</option>
             <option value="GASOLINA ADITIVADA">GASOLINA ADITIVADA</option>
         </select>
-        <br>
-        <button onclick="filtrarDados()">Filtrar</button>
     </div>
-    <div class="resultado" id="resultado"></div>
+    <div id="postos-lista"></div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
