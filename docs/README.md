@@ -24,7 +24,15 @@ O problema fundamental do trabalho é a dificuldade em encontrar postos de gasol
 
 ## Objetivos
 
-O objetivo do nosso trabalho é desenvolver uma Aplicação Web, a partir de ferramentas como o HTML e o CSS, de modo responsível, com o foco em facilitar o processo de localização dos postos de gasolina, assim como sua precificação e seu custo-benefício (tendo em vista o valor do combustível e sua qualidade, a partir de análises). O nome (GasFinder) idealiza a função do nosso projeto (encontrar o melhor local para abastecer).
+O objetivo do nosso trabalho é desenvolver uma Aplicação Web, a partir de ferramentas como o HTML e o CSS, de modo responsível, com o foco em:
+
+1- Facilitar o processo de localização dos postos de gasolina.
+
+2- Ajudar o usuário a verificar seu custo-benefício (tendo em vista o valor do combustível e sua qualidade, a partir de análises).
+
+3- Traçar a rota mais próxima até o posto.
+
+O nome (GasFinder) idealiza a função do nosso projeto (encontrar o melhor local para abastecer).
 
 ## Justificativa
 
@@ -34,7 +42,7 @@ O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estat�
 
 ## Público-Alvo
 
-O publico-alvo seriam todos os motoristas que quisessem fazer a utilização da aplicação.
+O publico-alvo seriam todos os motoristas que estejam interessados em economizar dinheiro , ou encontrar o posto mais próximo, ou verificar a bandeira de um posto, ou verificar a rota até um posto.
 
 
 ## Personas
@@ -54,8 +62,10 @@ Como um motorista que usa o veículo diariamente, eu gostaria de saber mais sobr
 ## Requisitos
 
 Os requisitos de um projeto são classificados em dois grupos:
-- Requisitos funcionais- Card com postos de gasolina ( trazendo as informações), tela de cadastro, tela de avaliação do posto.
-- Requisitos não funcionais- Usabilidade fácil,possível de mudanças de acordo com a geolocalização, responsividade, adequado para uso de API, Estética agradável da interface. 
+
+- Requisitos funcionais- Tela principal dotada de cards com postos de gasolina (trazendo as informações), tela de cadastro, tela de avaliação do posto, tela de como chegar até o posto, tela de login, tela que mostra o posto em destaque, fitro dos postos na tela principal.7
+  
+- Requisitos não funcionais- Usabilidade fácil,possível de mudanças de acordo com a geolocalização, responsividade, adequado para uso de API, estética agradável da interface. 
 
 
 ## User Flow
