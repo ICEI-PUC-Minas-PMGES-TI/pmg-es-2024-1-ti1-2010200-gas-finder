@@ -23,9 +23,26 @@ codigo/  (essa pasta aqui)
 │   │   ├── singup.css
 │   │   └── sobre.css
 │   │
+│   ├── html/
+│   │   ├── detalhesposto.html
+│   │   ├── home.html
+│   │   ├── localizacao.html
+│   │   ├── meu-perfil.html
+│   │   ├── postos.html
+│   │   ├── rota.html
+│   │   ├── rota2.html
+│   │   ├── signin.html
+│   │   ├── singup.html
+│   │   └── sobre.html
+│   │
 │   ├── js/
-│   │   ├── main.js
-│   │   └── (outros arquivos .js)
+│   │   ├── index.js
+│   │   ├── postos.js
+│   │   ├── perfil.js
+│   │   ├── stylemap.js
+│   │   ├── signin.js
+│   │   ├── singup.js
+│   │   └── tabela.json
 │   │
 │   ├── images/
 │      ├── logo.png
