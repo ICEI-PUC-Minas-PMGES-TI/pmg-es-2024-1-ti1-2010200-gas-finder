@@ -9,12 +9,19 @@ Uma sugestão da estrutura de diretórios para o projeto é a seguinte:
 ```plaintext
 codigo/  (essa pasta aqui)
 │
-├── index.html
 │
 ├── assets/
 │   ├── css/
-│   │   ├── styles.css
-│   │   └── (outros arquivos .css)
+│   │   ├── detalhesposto.css
+│   │   ├── home.css
+│   │   ├── localizacao.css
+│   │   ├── meu-perfil.css
+│   │   ├── navbar.css
+│   │   ├── postos.css
+│   │   ├── rota.css
+│   │   ├── signin.css
+│   │   ├── singup.css
+│   │   └── sobre.css
 │   │
 │   ├── js/
 │   │   ├── main.js
