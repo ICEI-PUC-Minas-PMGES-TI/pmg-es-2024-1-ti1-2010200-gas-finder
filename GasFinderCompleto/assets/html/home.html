@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="shortcut icon" href="../img/logo branca.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+</head>
+
+<body>
+    <!-- INICIO NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand me-auto" id="nome" href="../html/home.html"><img src="../img/gasfinderlogo.png"
+                        alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a href="../html/home.html"><img src="../img/gasfinderlogo.png" alt="logo"></a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center align-items-lg-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="postos.html">Postos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="localizacao.html">Localização</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="sobre.html">Sobre Nós</a>
+                            </li>
+                        </ul>
+                        <a href="meu-perfil.html"><button id="perfil-active" class="perfil-usuario">Meu Perfil</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- FIM NAVBAR -->
+
+  <main>
+    <section class="topo-do-site">
+      <div class="interface">
+        <div class="flex">
+          <div class="txt-topo-site">
+            <h1>
+              GAS FINDER: SEU PARCEIRO DE ECONOMIA EM CADA VIAGEM
+              <span>!</span>
+            </h1>
+            <p>
+              O Gas Finder é a sua ferramenta indispensável para encontrar o
+              melhor custo-benefício na hora de abastecer seu veículo. Com
+              nossa plataforma intuitiva e atualizada em tempo real, você pode
+              localizar os postos de gasolina mais próximos e comparar os
+              preços, garantindo que você obtenha o máximo de economia a cada
+              abastecimento. Não importa se você está planejando uma viagem
+              longa ou apenas precisa encher o tanque no dia a dia, o Gas
+              Finder está aqui para ajudar você a economizar na bomba e
+              aproveitar ao máximo cada quilômetro da sua jornada. Simplifique
+              sua busca por combustível e comece a economizar hoje mesmo com o
+              Gas Finder!
+            </p>
+            <div class="btn-contato">
+              <a href="postos.html"> <button>Comece agora</button></a>
+            </div>
+          </div>
+          <!-- txt topo do site-->
+          <div class="img-topo-do-site">
+            <img src="../img/bomba final.png" alt="" />
+          </div>
+          <!-- img topo do site-->
+        </div>
+        <!-- flex-->
+      </div>
+      <!-- interface-->
+    </section>
+    <!-- Fim do topo-->
+
+    <section class="especialidades">
+      <div class="interface">
+        <h2 class="titulo">NOSSAS <span>ESPECIALIDADES.</span></h2>
+        <div class="flex">
+          <div class="especialidades-box">
+            <i class="bi bi-cash-coin"></i>
+            <h3>Economia</h3>
+            <p>
+              O Gas Finder ajuda você a economizar em cada abastecimento.
+              Encontre os melhorespreços em postos próximos e faça escolhas 
+              inteligentes. Dirija com confiança e economize em cada viagem!
+            </p>
+          </div>
+          <div class="especialidades-box">
+            <i class="bi bi-hand-thumbs-up"></i>
+            <h3>Avaliação</h3>
+            <p>
+              No Gas Finder, usamos dados e avaliações dos usuários para
+              informar sobre preços e qualidade dos combustíveis. Sua opinião
+              é crucial para ajudar outros motoristas a escolherem com
+              confiança. Junte-se a nós para uma experiência de abastecimento
+              mais transparente e eficiente!
+            </p>
+          </div>
+          <div class="especialidades-box">
+            <i class="bi bi-map"></i>
+            <h3>Localização</h3>
+            <p>
+              A API do Gas Finder integra-se facilmente ao Google Maps e ao
+              Waze, permitindo que você encontre postos de gasolina com os
+              melhores preços diretamente no seu aplicativo de navegação
+              favorito. Simplifique sua busca por combustível econômico e
+              planeje suas viagens de forma mais eficiente com nossa API.
+            </p>
+          </div>
+        </div>
+        <!-- flex-->
+      </div>
+      <!-- interface-->
+    </section>
+  </main>
+
+  <script src="../js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

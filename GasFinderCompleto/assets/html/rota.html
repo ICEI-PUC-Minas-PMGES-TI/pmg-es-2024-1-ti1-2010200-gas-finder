@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rota</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/rota.css">
+    <link rel="shortcut icon" href="../img/logo branca.png" />
+</head>
+<body onload="initMap()">
+
+    <main>
+        <div id="map"></div>
+        <a href="localizacao.html"><img id="map-logo" src="../img/gasfinderlogo.png" alt="Logo"></a>
+        <div id="info">
+            <p id="distancia">Distância: --</p>
+            <p id="tempo-restante">Tempo estimado: --</p>
+        </div>
+    </main>
+    <div id="loading-screen"><div class="spinner"></div></div>
+    <script src="../js/stylemap.js"></script>
+    
+    <script>
+        let map;
+        let directionsService;
+        let directionsRenderer;
+        let userMarker;
+        let destinationPlaceId;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: -19.912998, lng: -43.940933 },
+                zoom: 12,
+                styles: mapstyle,
+                streetViewControl: false,
+                mapTypeControl: false,
+                zoomControl: false, 
+                scrollwheel: true,  
+                gestureHandling: 'auto' 
+            });
+
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const placeId = urlParams.get('place_id');
+
+            if (!placeId) {
+                alert('ID do posto de gasolina não encontrado na URL.');
+                return;
+            }
+
+            destinationPlaceId = placeId;
+
+            const service = new google.maps.places.PlacesService(map);
+            service.getDetails({ placeId: placeId }, handlePlaceDetails);
+
+            userMarker = new google.maps.Marker({
+                map: map,
+                icon: {
+                    path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                    scale: 4,
+                    fillColor: 'white',
+                    fillOpacity: 1,
+                    strokeColor: 'white',
+                    strokeWeight: 2
+                }
+            });
+
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(
+                    updateUserPosition,
+                    handleError('Não foi possível obter sua localização')
+                );
+            } else {
+                alert('Seu navegador não suporta geolocalização.');
+            }
+        }
+
+        function handlePlaceDetails(place, status) {
+            if (status === google.maps.places.PlacesServiceStatus.OK) {
+                calculateAndDisplayRoute(place);
+            } else {
+                alert('Não foi possível encontrar informações sobre o posto de gasolina: ' + status);
+            }
+        }
+
+        function updateUserPosition(position) {
+            const userLatLng = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+            userMarker.setPosition(userLatLng);
+            recalculateRoute(userLatLng);
+        }
+
+        function handleError(message) {
+            return function(error) {
+                console.error(message + ': ' + error.message);
+                alert(message + ': ' + error.message);
+            };
+        }
+
+        function calculateAndDisplayRoute(place) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                const userLatLng = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                };
+
+                const request = {
+                    origin: userLatLng,
+                    destination: { placeId: place.place_id },
+                    travelMode: 'DRIVING'
+                };
+
+                directionsService.route(request, function(result, status) {
+                    if (status === google.maps.DirectionsStatus.OK) {
+                        directionsRenderer.setOptions({ suppressMarkers: true });
+
+                        new google.maps.Marker({
+                            position: result.routes[0].legs[0].end_location,
+                            map: map,
+                            icon: {
+                                url: "https://maps.google.com/mapfiles/ms/icons/green-dot.png",
+                                scaledSize: new google.maps.Size(40, 40)
+                            }
+                        });
+
+                        directionsRenderer.setDirections(result);
+
+                        const nextRoutePoint = result.routes[0].legs[0].steps[0].end_location;
+                        const direction = google.maps.geometry.spherical.computeHeading(userLatLng, nextRoutePoint);
+
+                        userMarker.setIcon({
+                            path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                            scale: 4,
+                            fillColor: 'white',
+                            fillOpacity: 1,
+                            strokeColor: 'white',
+                            strokeWeight: 2,
+                            rotation: direction
+                        });
+
+                        // Esconder a tela de carregamento quando a rota for carregada
+                        document.getElementById('loading-screen').style.display = 'none';
+
+                        // Exibir distância e tempo
+                        const leg = result.routes[0].legs[0];
+                        document.getElementById('distancia').textContent = `Distância: ${leg.distance.text}`;
+                        document.getElementById('tempo-restante').textContent = `Tempo estimado: ${leg.duration.text}`;
+                    } else {
+                        handleError('Não foi possível calcular a rota')(new Error(status));
+                        document.getElementById('loading-screen').style.display = 'none';
+                    }
+                });
+            }, handleError('Não foi possível obter sua localização'));
+        }
+
+        function recalculateRoute(userLatLng) {
+            const request = {
+                origin: userLatLng,
+                destination: { placeId: destinationPlaceId },
+                travelMode: 'DRIVING'
+            };
+
+            directionsService.route(request, function(result, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    directionsRenderer.setOptions({ 
+                        suppressMarkers: true,
+                        preserveViewport: true 
+                    });
+                    directionsRenderer.setDirections(result);
+
+                    const nextRoutePoint = result.routes[0].legs[0].steps[0].end_location;
+                    const direction = google.maps.geometry.spherical.computeHeading(userLatLng, nextRoutePoint);
+
+                    userMarker.setIcon({
+                        path: google.maps.SymbolPath.FORWARD_CLOSED_ARROW,
+                        scale: 4,
+                        fillColor: 'white',
+                        fillOpacity: 1,
+                        strokeColor: 'white',
+                        strokeWeight: 2,
+                        rotation: direction
+                    });
+
+                    map.setCenter(userLatLng);
+                    map.setZoom(16);
+
+                    // Exibir distância e tempo
+                    const leg = result.routes[0].legs[0];
+                    document.getElementById('distancia').textContent = `Distância: ${leg.distance.text}`;
+                    document.getElementById('tempo-restante').textContent = `Tempo estimado: ${leg.duration.text}`;
+                } else {
+                    handleError('Não foi possível recalcular a rota')(new Error(status));
+                }
+            });
+        }
+
+    </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT7QYILx95f2BW1aIotyvflS9Lw7Sb9h8&&libraries=places"></script>
+</body>
+</html>
