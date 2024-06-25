@@ -9,7 +9,6 @@ O nome idealiza a função do nosso projeto (encontrar o melhor local para abast
 ## Alunos integrantes da equipe
 
 * Heleno Júnior
-* João Salomão
 * Kauã Agner   
 * Luiz Gontijo
 * Pedro Nunes
