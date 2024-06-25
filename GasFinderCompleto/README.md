@@ -44,10 +44,21 @@ codigo/  (essa pasta aqui)
 │   │   ├── singup.js
 │   │   └── tabela.json
 │   │
-│   ├── images/
-│      ├── logo.png
-│      └── (outras imagens)
-│   
-│
+│   ├── img/
+│   │   ├── Captura de tela 2024-04-8 185657.png
+│   │   ├── Captura de tela 2024-04-8 190056.png
+│   │   ├── Captura de tela 2024-04-8 212241.png
+│   │   ├── LUIS.png
+│   │   ├── WhatsApp Image 2024-06-21 at 02.04.05.png
+│   │   ├── bomba final.png
+│   │   ├── foto-perfil.png
+│   │   ├── gasfinderlogo.png
+│   │   ├── logo branca.png
+│   │   ├── logo verde.png
+│   │   ├── logo_verde_deitada.png
+│   │   ├── logoverde.png
+│   │   ├── posto.png
+│   │   ├── postoGasolina.png
+│   │   └── puc.png
 │
 └── README.md
