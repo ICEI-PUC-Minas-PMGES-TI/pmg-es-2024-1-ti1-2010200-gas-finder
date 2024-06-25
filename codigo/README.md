@@ -9,31 +9,56 @@ Uma sugestão da estrutura de diretórios para o projeto é a seguinte:
 ```plaintext
 codigo/  (essa pasta aqui)
 │
-├── index.html
 │
 ├── assets/
 │   ├── css/
-│   │   ├── styles.css
-│   │   └── (outros arquivos .css)
+│   │   ├── detalhesposto.css
+│   │   ├── home.css
+│   │   ├── localizacao.css
+│   │   ├── meu-perfil.css
+│   │   ├── navbar.css
+│   │   ├── postos.css
+│   │   ├── rota.css
+│   │   ├── signin.css
+│   │   ├── singup.css
+│   │   └── sobre.css
+│   │
+│   ├── html/
+│   │   ├── detalhesposto.html
+│   │   ├── home.html
+│   │   ├── localizacao.html
+│   │   ├── meu-perfil.html
+│   │   ├── postos.html
+│   │   ├── rota.html
+│   │   ├── rota2.html
+│   │   ├── signin.html
+│   │   ├── singup.html
+│   │   └── sobre.html
 │   │
 │   ├── js/
-│   │   ├── main.js
-│   │   └── (outros arquivos .js)
+│   │   ├── index.js
+│   │   ├── postos.js
+│   │   ├── perfil.js
+│   │   ├── stylemap.js
+│   │   ├── signin.js
+│   │   ├── singup.js
+│   │   └── tabela.json
 │   │
-│   ├── images/
-│   │   ├── logo.png
-│   │   └── (outras imagens)
-│   │
-│   └── fonts/
-│       ├── font1.ttf
-│       └── (outras fontes)
-│
-├── pages/
-│   ├── about.html
-│   ├── contact.html
-│   └── (outras páginas)
+│   ├── img/
+│   │   ├── Captura de tela 2024-04-8 185657.png
+│   │   ├── Captura de tela 2024-04-8 190056.png
+│   │   ├── Captura de tela 2024-04-8 212241.png
+│   │   ├── LUIS.png
+│   │   ├── WhatsApp Image 2024-06-21 at 02.04.05.png
+│   │   ├── bomba final.png
+│   │   ├── foto-perfil.png
+│   │   ├── gasfinderlogo.png
+│   │   ├── logo branca.png
+│   │   ├── logo verde.png
+│   │   ├── logo_verde_deitada.png
+│   │   ├── logoverde.png
+│   │   ├── posto.png
+│   │   ├── postoGasolina.png
+│   │   └── puc.png
 │
 └── README.md
-```
-
-Utilize a pasta pages para manter um arquivo para cada pessoa por artefato (sprints 2 e 3) e, com isso, isolar as alterações de cada pessoa, facilitando o trabalho de gestão do código.
