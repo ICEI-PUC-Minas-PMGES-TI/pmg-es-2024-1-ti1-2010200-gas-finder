@@ -1,65 +1,61 @@
 <<<<<<< HEAD
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: GasFinder
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Rosynni
+    given-names: Sávio
+  - family-names: Agner
+    given-names: Kauã
+  - family-names: Gontijo
+    given-names: Luiz
+  - family-names: Júnior
+    given-names: Heleno
+  - family-names: Nunes
+    given-names: Pedro
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Hanne
+    given-names: Michelle
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Aramuni
+    given-names: João
 keywords:
-  - 
-  - 
-repository-code: 
+  - Gas
+  - Finder
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2010200-gas-finder 
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2024-06-25
 =======
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: GasFinder
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Rosynni
+    given-names: Sávio
+  - family-names: Agner
+    given-names: Kauã
+  - family-names: Gontijo
+    given-names: Luiz
+  - family-names: Júnior
+    given-names: Heleno
+  - family-names: Nunes
+    given-names: Pedro
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Hanne
+    given-names: Michelle
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Aramuni
+    given-names: João
 keywords:
-  - 
-  - 
-repository-code: 
+  - Gas
+  - Finder
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2010200-gas-finder 
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2024-06-25
 >>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605
