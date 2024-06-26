@@ -77,3 +77,6 @@ A ideia inicial é que a nossa aplicação web só vai precisar de duas páginas
 O grupo está administrando as datas previstas por meio do site "Google agendas", onde pode criar um calendário comunitário com todos os membros inseridos.
 A divisão de papeis da parte de programação será definida a partir dos avanços e das necessidades que o grupo for percebendo. 
 
+## Referências Bibliográficas
+
+Rosynni, S., Agner, K., Gontijo, L., Júnior, H., Nunes, P., Hanne, M., Professor, & Aramuni, J., Professor. (2024). GasFinder (Version 1.0.0) [Computer software]. https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2010200-gas-finder
