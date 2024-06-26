@@ -19,7 +19,7 @@ main {
 .sessao-perfil {
   max-width: 700px;
   margin: 0 auto;
-  background-color: #202020;
+  background-color: #1c1c1c;
   padding: 20px;
   border-radius: 10px;
   color: #05ad40;
@@ -65,6 +65,22 @@ main {
   color: #fffdfd;
 }
 
+.btn-editar, .btn-excluir, btn-selecionar{
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #05ad40;
+  border: 0;
+  border-radius: 30px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.btn-editar:hover, .btn-excluir:hover, .btn-selecionar:hover {
+  box-shadow: 0px 0px 8px #014619;
+}
+
 input[type="file"] {
   display: none;
 }
@@ -72,38 +88,4 @@ input[type="file"] {
 #perfil-active{
   background-color: #024219;
   color: #fff;
-}
-
-#nova-foto{
-  cursor: pointer;
-  margin-left: 5px;
-}
-
-#editar-dados, #logout, #salvarAlteracoes{
-  border: 0;
-  border-radius: 4px;
-  text-align: end;
-  padding: 8px 20px;
-  background-color: #05ad40;
-  color: #fff;
-  font-weight: 500;
-  font-size: 1em;
-  cursor: pointer;
-  margin: 10px 0;
-  transition: background-color 0.3s, transform 0.3s;
-}
-
-#editar-dados:hover, #logout:hover, #salvarAlteracoes:hover{
-  box-shadow: inset 400px 0 0 0 #024219;
-  background-color: #024219;
-  color: #fff;
-}
-
-#inputsEdicao input{
-  background-color: #333;
-  border: 0;
-  color: #fff;
-  padding: 8px;
-  border-radius: 5px;
-  margin-bottom: 5px;
 }

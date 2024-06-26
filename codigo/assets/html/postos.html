@@ -38,13 +38,13 @@
                       <a class="nav-link active" aria-current="page" href="postos.html">Postos</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link mx-lg-2" href="localizacao.html">Localização</a>
+                      <a class="nav-link mx-lg-2" href="#">Localização</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link mx-lg-2" href="sobre.html">Sobre Nós</a>
+                      <a class="nav-link mx-lg-2" href="#">Sobre Nós</a>
                   </li>
               </ul>
-              <a href="meu-perfil.html"><button id="perfil-active" class="perfil-usuario">Meu Perfil</button></a>
+              <a href="meu-perfil.html"><button class="perfil-usuario">Meu Perfil</button></a>
           </div>
           </div>
         </div>
@@ -53,48 +53,51 @@
     <!-- FIM NAVBAR -->
 
     <main>
-      <div id="filter">
+      <div id="filter-bar">
         <div class="filter-item">
-          <label for="filtro-combustivel">Tipo de Combustível:</label>
-          <select id="filtro-combustivel">
-            <option value="TODOS">Todos</option>
-            <option value="ETANOL">Etanol</option>
-            <option value="GASOLINA">Gasolina</option>
-            <option value="GASOLINA ADITIVADA">Gasolina Aditivada</option>
-          </select>
+            <label for="filtro-combustivel">Tipo de Combustível:</label>
+            <select id="filtro-combustivel">
+                <option value="TODOS">Todos</option>
+                <option value="ETANOL">Etanol</option>
+                <option value="GASOLINA">Gasolina</option>
+                <option value="GASOLINA ADITIVADA">Gasolina Aditivada</option>
+            </select>
         </div>
+    
         <div class="filter-item">
-          <label for="filtro-bandeira">Bandeira:</label>
-          <select id="filtro-bandeira">
-            <option value="TODOS">Todas</option>
-            <option value="ALESAT">Alesat</option>
-            <option value="VIBRA">Vibra</option>
-            <option value="BRANCA">Branca</option>
-            <option value="RAIZEN">Raízen</option>
-          </select>
+            <label for="filtro-bandeira">Bandeira:</label>
+            <select id="filtro-bandeira">
+                <option value="TODOS">Todas</option>
+                <option value="ALESAT">Alesat</option>
+                <option value="VIBRA">Vibra</option>
+                <option value="BRANCA">Branca</option>
+                <option value="RAIZEN">Raízen</option>
+            </select>
         </div>
+    
         <div class="filter-item">
-          <label for="filtro-preco-distancia">Ordenar por:</label>
-          <select id="filtro-preco-distancia">
-            <option value="TODOS">Sem filtro</option>
-            <option value="MENOR_PRECO">Menor Preço</option>
-            <option value="MAIOR_PRECO">Maior Preço</option>
-            <option value="MENOR_DISTANCIA">Menor Distância</option>
-            <option value="MAIOR_DISTANCIA">Maior Distância</option>
-          </select>
+            <label for="filtro-preco-distancia">Ordenar por:</label>
+            <select id="filtro-preco-distancia">
+                <option value="TODOS">Sem filtro</option>
+                <option value="MENOR_PRECO">Menor Preço</option>
+                <option value="MAIOR_PRECO">Maior Preço</option>
+                <option value="MENOR_DISTANCIA">Menor Distância</option>
+                <option value="MAIOR_DISTANCIA">Maior Distância</option>
+            </select>
         </div>
-      </div>
+    </div>
+    
 
-          <div id="postos-container"></div>
-            <div id="pagination-container">
-                <button class="pagination-button" id="previous-page">Página Anterior</button>
-                <button class="pagination-button" id="next-page">Próxima Página</button>
-            </div>
-            <div id="page-info"></div>
+      <div id="postos-container"></div>
+<div id="pagination-container">
+    <button id="previous-page" class="pagination-button">Página Anterior</button>
+    <button id="next-page" class="pagination-button">Próxima Página</button>
+</div>
+<div id="page-info"></div>
+
     </main>
 
     <script src="../js/postos.js"></script>
-    <script src="../js/index.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

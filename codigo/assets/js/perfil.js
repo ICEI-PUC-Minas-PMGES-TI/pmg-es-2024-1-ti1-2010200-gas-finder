@@ -99,5 +99,5 @@ function deslogar() {
   localStorage.removeItem('userLogado');
   localStorage.removeItem('token');
 
-  window.location.href = '/assets/html/home.html';
+  window.location.href = '/assets/html/signin.html';
 }
