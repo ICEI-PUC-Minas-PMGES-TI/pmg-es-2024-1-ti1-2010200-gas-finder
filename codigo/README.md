@@ -12,6 +12,7 @@ codigo/  (essa pasta aqui)
 │
 ├── assets/
 │   ├── css/
+│   │   ├── avaliacoes.css
 │   │   ├── detalhesposto.css
 │   │   ├── home.css
 │   │   ├── localizacao.css
@@ -24,6 +25,7 @@ codigo/  (essa pasta aqui)
 │   │   └── sobre.css
 │   │
 │   ├── html/
+│   │   ├── avaliacoes.html
 │   │   ├── detalhesposto.html
 │   │   ├── home.html
 │   │   ├── localizacao.html
@@ -36,6 +38,7 @@ codigo/  (essa pasta aqui)
 │   │   └── sobre.html
 │   │
 │   ├── js/
+│   │   ├── detalhesposto.js
 │   │   ├── index.js
 │   │   ├── postos.js
 │   │   ├── perfil.js
