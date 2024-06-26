@@ -3,8 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #020202;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -12,6 +11,25 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-color: #101310;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img-logo{
+  text-align: center;
+}
+
+img{
+  width: 100px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in;
+}
+
+img:hover{
+  transform: scale(1.07);
 }
 
 .container {
@@ -22,32 +40,22 @@ body {
 }
 
 .card {
-  .card {
-    background-color: #1a1a1a;
-    padding: 30px;
-    border-radius: 4%;
-    box-shadow: 3px 3px 1px 0px #00000060;
-    width: 400px;
-  }
+  width: 350px;
+  background-color: #202020;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 3px 3px 1px 0px #202020
 }
 
-h1 {
+h1{
   text-align: center;
   margin-bottom: 20px;
-  color: #05ad40;
-  font-size: 24pt;
+  color: #05ad40
 }
 
-.label-float {
-  position: relative;
-  padding-top: 20px;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.label-float input {
+.label-float input{
   width: 100%;
-  padding: 10px 5px;
+  padding: 5px 5px;
   display: inline-block;
   border: 0;
   border-bottom: 2px solid #05ad40;
@@ -55,93 +63,117 @@ h1 {
   outline: none;
   min-width: 180px;
   font-size: 16px;
-  transition: all 0.3s ease-out;
-  color: white;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  
 }
 
-.label-float input:focus {
+.label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.label-float input:focus{
   border-bottom: 2px solid #04bb44;
 }
 
-.label-float label {
+.label-float label{
   color: #05ad40;
   pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
   margin-top: 13px;
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
 }
 
 .label-float input:focus + label,
-.label-float input:valid + label {
+.label-float input:valid + label{
   font-size: 13px;
   margin-top: 0;
-  color: #05ad40;
+  color: #05ad40
 }
 
-button {
+button{
   background-color: transparent;
-  border: 2px solid #05ad40;
+  border-color: #05ad40;
   color: #05ad40;
-  padding: 12px 20px;
+  padding: 7px;
   font-weight: bold;
-  font-size: 14pt;
+  font-size: 12pt;
   margin-top: 20px;
   border-radius: 4px;
   cursor: pointer;
   outline: none;
-  transition: all 0.4s ease-out;
+  transition: all .4s ease-out;
 }
 
-button:hover {
+button:hover{
   background-color: #05ad40;
   color: #fff;
 }
 
-.justify-center {
+.justify-center{
   display: flex;
   justify-content: center;
 }
 
-hr {
+hr{
   margin-top: 10%;
   margin-bottom: 10%;
-  width: 80%;
-  border: 1px solid #05ad40;
+  width: 60%;
 }
 
-p {
+p{
   color: #05ad40;
   font-size: 14pt;
   text-align: center;
 }
 
-a {
+a{
   color: #05ad40;
   font-weight: bold;
   text-decoration: none;
-  transition: all 0.3s ease-out;
+  transition: all .3s ease-out;
 }
 
-a:hover {
-  color: #04bb44;
+a:hover{
+  color: #05ad40;
+}
+#usuario {
+  color: rgb(255, 255, 255); /* Cor inicial do texto */
 }
 
-#msgError {
+/* Estilo do campo de entrada quando está em foco */
+#usuario:focus {
+  color: white; /* Muda a cor do texto para branco quando o campo está em foco */
+}
+
+/* Estilo do campo de entrada quando está sendo digitado */
+.label-float input:valid {
+  color: white; /* Muda a cor do texto para branco quando há texto no campo */
+}
+
+/* Label flutuante */
+.label-float {
+  position: relative;
+  padding-top: 13px;
+}
+.fa-eye{
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+  color: #05ad40;
+}
+
+ #msgError{
   text-align: center;
   color: #ff0000;
   background-color: #ffbbbb;
   padding: 10px;
   border-radius: 4px;
   display: none;
-}
-
-.fa-eye {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #05ad40;
 }

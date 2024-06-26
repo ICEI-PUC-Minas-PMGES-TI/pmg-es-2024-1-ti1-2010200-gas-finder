@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliações do Posto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/avaliacoes.css"> <!-- Adicione seu arquivo CSS personalizado -->
+    <link rel="shortcut icon" href="../img/logo branca.png">
+</head>
+
+<body>
+    <!-- INICIO NAVBAR -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand me-auto" id="nome" href="home.html"><img src="../img/gasfinderlogo.png"
+                        alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <a href="home.html"><img src="../img/gasfinderlogo.png" alt="logo"></a>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center align-items-lg-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="home.html">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="postos.html">Postos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="localizacao.html">Localização</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="sobre.html">Sobre Nós</a>
+                            </li>
+                        </ul>
+                        <a href="meu-perfil.html"><button id="perfil-active" class="perfil-usuario">Meu Perfil</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- FIM NAVBAR -->
+
+    <main>
+        <section id="avaliacoes">
+            <button id="btnVoltar" class="btn btn-outline-primary" onclick="VoltarPágina()">
+                <i class="bi bi-arrow-left"></i> Voltar
+            </button>        
+            <div id="posto-container"></div>
+            <h2>Avaliações</h2>
+            <div id="comments"></div>
+        </section>
+    </main>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Carregar o JSON do arquivo e exibir os detalhes do posto
+    fetch('../js/tabela.json')
+        .then(response => response.json())
+        .then(data => {
+            const cnpjParam = getQueryParam('cnpj'); // Obtém o parâmetro 'cnpj' da URL
+            const posto = data.find(item => item.CNPJ === cnpjParam); // Procura o posto pelo CNPJ
+
+            if (posto) {
+                const container = document.getElementById('posto-container');
+                const postoDetalhesHTML = `
+                    <div class="posto">
+                        <p id="nome-posto"><strong>${posto['Nome do posto']}</strong></p>
+                    </div>
+                `;
+                container.innerHTML = postoDetalhesHTML;
+
+                // Define o CNPJ como o ID do posto para carregar os comentários corretos
+                localStorage.setItem('currentPostCnpj', posto.CNPJ);
+
+                // Exibe as avaliações do posto específico
+                displayComments(posto.CNPJ);
+            } else {
+                console.error('Posto não encontrado.');
+            }
+        })
+        .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
+
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    function displayComments(cnpj) {
+        let commentsList = JSON.parse(localStorage.getItem(`commentsList_${cnpj}`) || '[]');
+        const commentSection = document.getElementById('comments');
+
+        // Limpa o conteúdo atual das avaliações
+        commentSection.innerHTML = '';
+
+        if (commentsList.length === 0) {
+            const noCommentsMessage = document.createElement('p');
+            noCommentsMessage.textContent = 'Nenhuma avaliação disponível para este posto.';
+            noCommentsMessage.id = 'no-comments';
+            commentSection.appendChild(noCommentsMessage);
+        } else {
+            // Exibe as avaliações
+            commentsList.forEach(comment => {
+                const commentDiv = document.createElement('div');
+                commentDiv.classList.add('comment');
+
+                const userSpan = document.createElement('span');
+                userSpan.classList.add('comment-user');
+
+                const userAvatar = document.createElement('img');
+                userAvatar.src = comment.pic; // Adiciona a foto do usuário
+                userAvatar.alt = comment.nome;
+                userAvatar.style.width = '30px'; // Ajusta o tamanho da imagem conforme necessário
+                userAvatar.style.height = '30px';
+                userAvatar.style.borderRadius = '50%'; // Adiciona border-radius de 50%
+
+                const userName = document.createElement('span');
+                userName.textContent = comment.nome;
+
+                userSpan.appendChild(userAvatar);
+                userSpan.appendChild(userName);
+
+                const timestampSpan = document.createElement('span');
+                timestampSpan.classList.add('comment-timestamp');
+                timestampSpan.textContent = ` ${comment.timestamp}`;
+
+                const ratingSpan = document.createElement('span');
+                ratingSpan.classList.add('comment-rating');
+                ratingSpan.innerHTML = '★'.repeat(comment.rating) + '☆'.repeat(5 - comment.rating);
+
+                const commentText = document.createElement('p');
+                commentText.classList.add('comment-text');
+                commentText.textContent = comment.comment;
+
+                const userLogado = JSON.parse(localStorage.getItem('userLogado'));
+                if (userLogado && userLogado.user === comment.user) {
+                    const deleteButton = document.createElement('span');
+                    deleteButton.classList.add('delete-comment');
+                    deleteButton.innerHTML = '&times;';
+                    deleteButton.addEventListener('click', () => {
+                        commentsList = commentsList.filter(item => item !== comment);
+                        localStorage.setItem(`commentsList_${cnpj}`, JSON.stringify(commentsList));
+                        displayComments(cnpj);
+                    });
+                    commentDiv.appendChild(deleteButton);
+                }
+
+                commentDiv.appendChild(userSpan);
+                commentDiv.appendChild(timestampSpan);
+                commentDiv.appendChild(ratingSpan);
+                commentDiv.appendChild(commentText);
+
+                commentSection.appendChild(commentDiv);
+            });
+        }
+    }
+});
+
+function VoltarPágina() {
+    window.history.back();
+}
+    </script>
+
+    <script src="../js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

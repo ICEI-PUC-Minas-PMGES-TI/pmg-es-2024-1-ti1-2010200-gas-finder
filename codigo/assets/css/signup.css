@@ -3,15 +3,32 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: #000000; 
+  background-color: #101310; 
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed
-  
+  background-attachment: fixed;
+  height: 80vh;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+#img-logo{
+  text-align: center;
+}
+
+img{
+  width: 100px;
+  margin-bottom: 10px;
+  transition: transform 0.2s ease-in;
+}
+
+img:hover{
+  transform: scale(1.07);
 }
 
 .container {
@@ -22,10 +39,10 @@ body {
 }
 
 .card {
-  background-color: #1a1a1a;
+  background-color: #202020;
   padding: 30px;
   border-radius: 4%;
-  box-shadow: 3px 3px 1px 0px #00000060;
+  box-shadow: 3px 3px 1px 0px #202020;
   width: 400px;
 }
 

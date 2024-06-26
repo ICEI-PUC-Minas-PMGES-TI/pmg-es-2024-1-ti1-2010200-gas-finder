@@ -1,12 +1,13 @@
 /* INICIO NAVBAR */
 
 header{
-    height: 110px;
+    height: 100px;
 }
 
 .navbar{
     background-color: #05ad40;
-    min-height: 80px;
+    min-height: 70px;
+    max-height: 70px;
 }
 
 .nav-link{

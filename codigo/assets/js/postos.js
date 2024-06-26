@@ -85,15 +85,13 @@ function criarHTMLPostos(postos, page) {
     currentPostos.forEach((posto, index) => {
         const postoHTML = `
             <div class="posto-card">
-                <p><strong>Nome do posto:</strong> ${posto['Nome do posto']}</p>
-                <p><strong>Cidade:</strong> ${posto.Cidade}</p>
-                <p><strong>Endereço:</strong> ${posto['Rua/avenida']}, ${posto.Número}, ${posto.Bairro}</p>
-                <p><strong>Tipo de combustível:</strong> ${posto['Tipo de combustível']}</p>
+                <img id="postoimg" src="../img/posto.png" alt="">
+                <h5 id="nome-posto"><strong>${posto['Nome do posto']}</strong></h5>
                 <p><strong>Preço:</strong> ${posto.Preço}</p>
+                <p><strong>Tipo de combustível:</strong> ${posto['Tipo de combustível']}</p>
                 <p><strong>Bandeira:</strong> ${posto.Bandeira}</p>
                 <p><strong>Distância:</strong> ${posto.distancia.toFixed(2)} km</p>
-                <button class="info-button" onclick="redirectToDetails(${startIndex + index})">Mais Informações</button>
-
+                <button id="btn-info" onclick="redirectToDetails(${startIndex + index})">Mais Informações</button>
             </div> 
         `;
         container.innerHTML += postoHTML;
