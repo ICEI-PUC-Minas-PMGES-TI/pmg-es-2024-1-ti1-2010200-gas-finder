@@ -1,0 +1,172 @@
+body{
+    background-color: #101310;
+}
+
+.posto-card {
+    background-color: #242424;
+    border-radius: 20px; 
+    padding: 20px; 
+    margin-bottom: 20px;
+    width: 400px;
+    transition: transform 0.2s ease-in, box-shadow 0.2s ease-in;
+    text-align: center;
+}
+
+.posto-card:hover {
+    transition: 0.2s ease-in;
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.posto-card p {
+    font-size: 15px; 
+    color: #fff; 
+    line-height: 1.6;
+    text-align: start; 
+    margin: 10px ;
+}
+
+#nome-posto{
+    color: #fff;
+}
+
+@media (max-width: 400px) {
+    .posto-card{
+        width: 350px;
+    }
+
+    #postoimg{
+        max-width: 300px;
+    }
+}
+
+#postos-container {
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+    gap: 20px;
+}
+
+#postoimg{
+    width: 350px;
+    height: 180px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    border-radius: 10px;
+}
+
+#btn-info {
+    border: 0;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 8px 20px;
+    background-color: #05ad40;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.3s;
+}
+
+#btn-info:hover{
+    box-shadow: inset 400px 0 0 0 #024219;
+    background-color: #024219;
+    color: #fff;
+}
+
+#filter {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    gap: 10px; /* Espaçamento entre os filtros */
+    background-color: #101310; /* Cor de fundo da barra */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 4px; /* Bordas arredondadas */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    margin-bottom: 10px; /* Espaçamento inferior */
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column; /* Alinha label e select verticalmente */
+    align-items: flex-start; /* Alinha label e select à esquerda */
+    margin: 5px; /* Espaçamento ao redor dos itens */
+}
+
+.filter-item label {
+    font-weight: 600;
+    margin-bottom: 3px; /* Espaçamento abaixo do label */
+    font-size: 14px; /* Tamanho da fonte do label */
+    color: #fff; /* Cor do texto do label */
+}
+
+.filter-item select {
+    font-weight: 600;
+    padding: 5px 8px; /* Espaçamento interno do select */
+    border: 1px solid #022705; /* Borda do select */
+    color: #fff;
+    border-radius: 4px; /* Bordas arredondadas do select */
+    background-color: #242424; /* Cor de fundo do select */
+    font-size: 14px; /* Tamanho da fonte do select */
+    width: 150px; /* Largura do select */
+    transition: background-color 0.3s, border-color 0.3s; /* Transição suave */
+}
+
+.filter-item select:hover {
+    background-color: #242424; /* Cor de fundo ao passar o mouse */
+    border-color: #05ad40; /* Cor da borda ao passar o mouse */
+}
+
+.filter-item select:focus{
+    outline: 1px solid #05ad40;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    #filter {
+        flex-direction: column; /* Empilha itens verticalmente */
+        align-items: stretch; /* Estica itens para ocupar a largura completa */
+    }
+
+    .filter-item {
+        width: 100%; /* Ocupa largura total em telas menores */
+    }
+
+    .filter-item select {
+        width: 100%; /* Remove largura fixa em telas menores */
+    }
+}
+
+#pagination-container{
+    margin-top: 20px; /* Espaçamento superior opcional */
+    margin-left: 10px;
+}
+
+#page-info{
+    margin-left: 15px;
+    color: #fff;
+}
+
+.pagination-button {
+    background-color: #024219; /* Cor de fundo */
+    border: none; /* Remover borda */
+    color: white; /* Cor do texto */
+    padding: 7px 10px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do texto */
+    text-decoration: none; /* Remover sublinhado */
+    display: inline-block; /* Display inline */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 4px 2px; /* Margem */
+    cursor: pointer; /* Cursor de mãozinha */
+    border-radius: 4px; /* Bordas arredondadas */
+}
+
+.pagination-button:hover {
+    box-shadow: inset 400px 0 0 0 #05ad40;
+    background-color: #024219;
+    color: #fff;
+}
