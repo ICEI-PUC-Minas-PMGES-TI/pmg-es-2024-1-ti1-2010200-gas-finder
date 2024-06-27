@@ -5,6 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (token == null) {
         perfilUsuarioButton.textContent = "Login";
-        perfilUsuarioLink.href = "/gascompleto_demo/html/signin.html";
+        perfilUsuarioLink.href = "/pmg-es-2024-1-ti1-2010200-gas-finder/html/signin.html";
     }
 })
