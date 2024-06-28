@@ -21,4 +21,9 @@ O nome idealiza a função do nosso projeto (encontrar o melhor local para abast
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Link para o site hospedado: 
+
+https://icei-puc-minas-pmges-ti.github.io/pmg-es-2024-1-ti1-2010200-gas-finder/
+
+Após acessar o link é necessário permitir que o google acesse sua localização, para que a API de geolocalização consiga funcionar perfeitamente.
+
