@@ -73,6 +73,13 @@ A ideia inicial é que a nossa aplicação web só vai precisar de duas páginas
 
 O GasFinder foi totalmente trabalhado no SCRUM, contendo sprints que eram realizadas praticamente a cada três semanas. A primeira sprint foi realizada em grupo e contou, majoritariamente, com atividades de documentação (elicitação de requisitos funcionais e não funcionais, definição dos stakeholders, apresentação dos wireframes...). Enquanto isso as sprints dois e três foram realizadas individualmente, onde cada integrante do grupo enviava a sua parte do trabalho. Por fim, a sprint 4 foi em grupo e ilustrou a conclusão do trabalho, onde integramos as sprints que foram realizadas individualmente e realizamos uma apresentação na sala de aula mostrando as funcionalidades do site. 
 
+## Funcionalidades
+
+<div align="center">
+<img src=">
+
+</div>
+
 ## Gestão de Projetos
 
 O grupo está administrando as datas previstas por meio do site "Google agendas", onde pode criar um calendário comunitário com todos os membros inseridos.
