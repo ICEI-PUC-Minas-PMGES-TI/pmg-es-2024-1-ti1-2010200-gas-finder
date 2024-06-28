@@ -76,15 +76,15 @@ O GasFinder foi totalmente trabalhado no SCRUM, contendo sprints que eram realiz
 ## Funcionalidades
 
 <div align="center">
-<img src="docs/assets/img/Home.jpg">
-<img src="docs/assets/img/cadastro.jpg">
-<img src="docs/assets/img/detalhesposto.jpg">
-<img src="docs/assets/img/login.jpg">
-<img src="docs/assets/img/mapa.jpg">
-<img src="docs/assets/img/mapaRota.jpg">
-<img src="docs/assets/img/perfil.jpg">
-<img src="docs/assets/img/postoscard.jpg">
-<img src="docs/assets/img/sobre nós.jpg">
+<img src="../docs/assets/img/Home.jpg">
+<img src="../docs/assets/img/cadastro.jpg">
+<img src="../docs/assets/img/detalhesposto.jpg">
+<img src="../docs/assets/img/login.jpg">
+<img src="../docs/assets/img/mapa.jpg">
+<img src="../docs/assets/img/mapaRota.jpg">
+<img src="../docs/assets/img/perfil.jpg">
+<img src="../docs/assets/img/postoscard.jpg">
+<img src="../docs/assets/img/sobre nós.jpg">
 </div>
 
 ## Gestão de Projetos
