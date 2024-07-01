@@ -92,6 +92,10 @@ O GasFinder foi totalmente trabalhado no SCRUM, contendo sprints que eram realiz
 O grupo está administrando as datas previstas por meio do site "Google agendas", onde pode criar um calendário comunitário com todos os membros inseridos.
 A divisão de papeis da parte de programação será definida a partir dos avanços e das necessidades que o grupo for percebendo. 
 
+## Link para o site hospeadado
+
+https://icei-puc-minas-pmges-ti.github.io/pmg-es-2024-1-ti1-2010200-gas-finder/ 
+
 ## Referências Bibliográficas
 
 Rosynni, S., Agner, K., Gontijo, L., Júnior, H., Nunes, P., Hanne, M., Professor, & Aramuni, J., Professor. (2024). GasFinder (Version 1.0.0) [Computer software]. https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-1-ti1-2010200-gas-finder
